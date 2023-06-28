@@ -105,7 +105,7 @@ function criaLinhaFi(valor1, valor2, total) {
         if (i == 0) {
 
             let novacelulath = document.createElement("th")
-            novacelulath.textContent = (tabelacorpo.rows.length);
+            novacelulath.textContent =(tabelacorpo.rows.length+1);
             novalinha.appendChild(novacelulath);
 
 

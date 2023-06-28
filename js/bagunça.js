@@ -1,4 +1,4 @@
-var array = [];
+var array = [12,12,15,15,16,18,20,22,25,27,27,29,32,32,34,38,40,42,42,45,48,50,50,52];
 var tabela = document.getElementById("tabelId")
 
 
@@ -13,7 +13,7 @@ function reset() {
     removerLinhas("taabelaCorpoFi", "tr");
 
     for (var i = 1; i < tabela.rows.length - 1; i++) {
-        console.log(primiroValor.value)
+        // console.log(primiroValor.value)
          let numerosAleatorios = Math.floor(Math.random() * (segundoValor.value - primiroValor.value +1)) + Number(primiroValor.value) ;
         // let numerosAleatorios = Math.floor(Math.random() * (50 - 10 + 1)) + Number(10);
         array.push(+numerosAleatorios);
@@ -40,7 +40,7 @@ function media() {
     var somaDados = document.getElementById("somaDados");
     var quantidadeDados = document.getElementById("qantidadaElementos");
     var mediaValor = somar() / (tabela.rows.length - 2);
-    media.innerHTML = mediaValor;
+    media.innerHTML = mediaValor.toFixed(2);
     somaDados.innerHTML = "<mn>"+ somar() +"</mn>";
     quantidadeDados.textContent = array.length;
 
@@ -52,12 +52,18 @@ function media() {
 
 
 function mediana() {
-    for (var i = 0; i < array.length; i++) {
+
+
         let getMediana = document.getElementById("valorMediana");
-        getMediana.innerHTML = (array.sort());
+        let localMediana = document.getElementById("valorMedianaReal");
+        var mediana = calcularMediana(array);
+        array.sort(function(a, b) {
+            return a - b;
+          });
 
-    }
-
+        getMediana.innerHTML = (array);
+        localMediana.textContent = mediana;
+  
 }
 
 function desvio() {
@@ -151,7 +157,7 @@ function varancia() {
     var ps3 = (valorQuadrado() - ps2);
     var ps4 = (ps3 / (array.length - 1));
     // campovariancia.innerHTML = ps4;
-    console.log(ps4)
+    // console.log(ps4)
     return ps4.toFixed(4);
 
 
@@ -186,7 +192,7 @@ function Coefi_variaçâo() {
     var lblCvPor = document.getElementById("valorCvPor");
     lblCv.innerHTML = cv;
     lblCvPor.innerHTML = cvP;
-    console.log(Number(cv.toFixed(2)), '%');
+    // console.log(Number(cv.toFixed(2)), '%');
 
 
 }
@@ -224,4 +230,27 @@ function dados() {
 
 
 }
+
+function calcularMediana(array) {
+    // Ordena o array em ordem crescente
+    array.sort(function(a, b) {
+      return a - b;
+    });
+  
+    const tamanho = array.length;
+    const meio = Math.floor(tamanho / 2);
+    console.log(meio , "meio  ")
+  
+    if (tamanho % 2 === 1) {
+      // Tamanho ímpar, mediana é o valor central
+      return array[meio];
+    } else {
+      // Tamanho par, mediana é a média dos dois valores centrais
+      console.log(array[meio - 1] , array[meio]);
+  
+      return (array[meio - 1] + array[meio]) / 2;
+    
+    }
+  }
+  
 

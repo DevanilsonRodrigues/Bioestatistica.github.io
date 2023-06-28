@@ -262,23 +262,22 @@
                         </div>
 
 
-                        <div class="col-xl-10 col-md-6">
+                        <div class="col-xl-9 col-md-6">
                             <div class="card bg-warning text-white mb-4">
                                 <div class="card-body"><button onclick="mediana()" type="button"
                                         class="btn btn-success btn-sm rounded-pill mb- 2 btn-3d">Mediana</button></div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <!-- <a class="small text-white stretched-link" href="#">View Details</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div> -->
-
                                     <label id="valorMediana" for="">0</label>
-
-
+                    
                                 </div>
+                                <label id="valorMedianaReal"></label>
 
                             </div>
                         </div>
 
-                        <div class="col-xl-6 col-md-6">
+                        <div class="col-xl-5 col-md-6">
                             <div class="card bg-success text-white mb-4">
                                 <div class="card-body"> <button onclick="passaDados()" type="button"
                                         class="btn btn-success btn-sm rounded-pill mb- 2 btn-3d">Variância</button>
@@ -390,13 +389,13 @@
                                             <mo>Dp</mo>
                                             <mo>=</mo>
                                             <msqrt>
-                                              <mn id="valorVariavel">S</mn>
+                                                <mn id="valorVariavel">S</mn>
                                             </msqrt>
                                             <mo> =</mo>
                                             <mn id="variavelPadrao"> 0</mn>
-                                          </math>
+                                        </math>
                                     </div>
-                                
+
 
                                 </div>
                             </div>
@@ -463,30 +462,37 @@
 
                                     <div class="botoesBaixo">
 
-
-
-
-
-
-                                        <!-- <button onclick="somar()" type="button"
-                                            class="btn btn-success btn-primary btn-sm mb-4 btn-3d ">Soma</button> -->
-
-                                        <!-- <button onclick="desvio()" type="button"
-                                            class="btn btn-success btn-primary btn-sm mb-4 btn-3d">Desvio</button> -->
-
-                                        <!-- <button onclick="valorQuadrado()" type="button"
-                                            class="btn btn-success btn-primary btn-sm mb-4 btn-3d">X²</button> -->
-
-                                        <button onclick="dados()" type="button"
-                                            class="btn btn-success btn-primary btn-sm mb-4 btn-3d">Enviar</button>
-
-                                        <!-- <button onclick="criaLinha()" type="button"
-                                            class="btn btn-success btn-primary btn-sm mb-4 btn-3d">nova
-                                            linha</button>-->
                                         <button id="botaofi" onclick=" caminho()" type="button"
                                             class="btn btn-success btn-primary btn-sm mb-4 btn-3d">Cuculo de
                                             classes</button>
 
+                                         <div class="forumulak">
+                                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                                <mi>k</mi>
+                                                <mo>=</mo>
+                                                <mn>1</mn>
+                                                <mo>+</mo>
+                                                <mn>3.322</mn>
+                                                <mi>log</mi>
+                                                <mo stretchy="false">(</mo>
+                                                <mi id="valorN">n</mi>
+                                                <mo stretchy="false">)</mo>
+                                            </math>
+                                            <br>
+                                            <math>
+                                                <mi>k</mi>
+                                                <mo>≈ </mo>
+                                                <mn class="resutado">resu</mn>
+                                            </math>
+                                            <br>
+                                            <math>
+                                                <mi>k</mi>
+                                                <mo>= </mo>
+                                                <mn class="resutado">resu</mn>
+                                            </math>
+
+
+                                        </div> 
 
                                     </div>
                                 </div>
