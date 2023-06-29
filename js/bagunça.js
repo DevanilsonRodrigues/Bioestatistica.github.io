@@ -1,4 +1,4 @@
-var array = [12,12,15,15,16,18,20,22,25,27,27,29,32,32,34,38,40,42,42,45,48,50,50,52];
+var array = [];
 var tabela = document.getElementById("tabelId")
 
 
@@ -9,7 +9,7 @@ function reset() {
     //console.log("primoro", primiroValor.value , "segundo", segundoValor.value)
     array.splice(0);
     limpar();
-    contador = 0;
+    contador = 0;               
     removerLinhas("taabelaCorpoFi", "tr");
 
     for (var i = 1; i < tabela.rows.length - 1; i++) {
