@@ -136,13 +136,13 @@
 
 
 
-                    <div class="card mb-4">
+                    <div class="card mb-4 ">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
                             Data base
                         </div>
                         <div class="card-body">
-                            <div>
+                            <div class="elementos_superio">
                                 <select onchange="handleSelectChange()" onclick="quantidaLinha()" id="selectValor">
                                     <option selected>1</option>
                                     <option>10</option>
@@ -150,9 +150,9 @@
                                     <option>20</option>
                                     <option value="custom">Custom</option>
 
-
                                 </select>
 
+                                
                                 <div class="customInput">
                                     
                                     <input onkeydown="quantidaLinha(event)" type="text" id="customInput"
@@ -163,23 +163,23 @@
                                     </button>
 
                                     <input type="number" class="campoValores" id="primeiroValor" name="campoNumerico">
-                                    <p> a </p>
+                                    <p > A </p>
                                     <input type="number" class="campoValores" id="segundoValor" name="campoNumerico">
-
 
                                 </div>
 
 
 
                             </div>
+                            
 
 
 
 
 
 
-                            <table id="tabelId" class="table table-bordered border-primary">
-                                <thead>
+                            <table id="tabelId" class="table border-primar">
+                                <thead class="table-dark">
                                     <tr>
                                         <th scope="col">#</button></th>
                                         <th scope="col">Dados (x)</th>
@@ -190,18 +190,18 @@
                                 <tbody id="tabela-corpo">
                                     <tr1>
                                         <th scope="row">1</th>
-                                        <td c>0</td>
                                         <td contenteditable="true">0</td>
-                                        <td>0</td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">0</td>
                                         </tr>
                                 </tbody>
 
                                 <tfoot>
                                     <tr>
                                         <th scope="row">Soma</th>
-                                        <td onclick="somar()" contenteditable="true" id="soma">0</td>
-                                        <td onclick="desvio()" contenteditable="true" id="somades">0</td>
-                                        <td onclick="valorQuadrado()" contenteditable="true" id="somaquadrado">0</td>
+                                        <td onclick="somar()"  id="soma">0</td>
+                                        <td onclick="desvio()"  id="somades">0</td>
+                                        <td onclick="valorQuadrado()"  id="somaquadrado">0</td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -223,7 +223,7 @@
 
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-primary text-white mb-4">
-                                <div class="card-body"><button> <button onclick="media()" type="button"
+                                <div class="card-body"><button onclick="media()" type="button"
                                             class="btn btn-success btn-sm rounded-pill mb- 2 btn-3d">Média</button>
                                     </button>
                                 </div>
@@ -264,7 +264,7 @@
 
 
                         <div class="col-xl-9 col-md-6">
-                            <div class="card bg-warning text-white mb-4">
+                            <div class="card bg-primary text-white mb-4">
                                 <div class="card-body"><button onclick="mediana()" type="button"
                                         class="btn btn-success btn-sm rounded-pill mb- 2 btn-3d">Mediana</button></div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
@@ -279,7 +279,7 @@
                         </div>
 
                         <div class="col-xl-5 col-md-6">
-                            <div class="card bg-success text-white mb-4">
+                            <div class="card bg-danger text-white mb-4">
                                 <div class="card-body"> <button onclick="passaDados()" type="button"
                                         class="btn btn-success btn-sm rounded-pill mb- 2 btn-3d">Variância</button>
                                 </div>
@@ -428,7 +428,7 @@
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-chart-area me-1"></i>
-                                    Area Chart Example
+                                   
                                 </div>
                                 <div class="card-body">
                                     <div class="col-md-8">
@@ -457,7 +457,7 @@
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-chart-bar me-1"></i>
-                                    Bar Chart Example
+                                   
                                 </div>
                                 <div class="card-body">
 

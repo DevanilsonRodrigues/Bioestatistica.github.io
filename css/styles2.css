@@ -17,7 +17,7 @@
      display: flex;
      align-items: center;
    
-    
+
   
 }
 .posiçao{
@@ -102,4 +102,59 @@
 .formula2{
   margin-top: 7%;
 }
+
+button.btn {
+  position: relative;
+  padding-right: 30px; /* Espaço para a seta */
+  background-color: rgb(0, 166, 39);
+}
+
+
+button.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Posição da seta */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 6px; /* Tamanho da seta */
+  border-color: transparent transparent transparent rgb(253, 253, 253); /* Cor da seta */
+}
+
+
+
+
+
+
+
+
+div.customInput {
+  display: flex;
+  align-items: center;
+}
+
+div.customInput p {
+  margin: 0 5px; /* Margem para espaçamento entre os elementos */
+}
+div.elementos_superio {
+  margin-bottom: 30px; /* Espaçamento vertical inferior */
+}
+
+table {
+  border: 1px solid #000000; /* Cor e espessura da borda */
+  border-collapse: collapse; /* Mesclar bordas adjacentes */
+}
+
+th, td {
+  border: 1px solid #000000; /* Cor e espessura da borda para células de cabeçalho (th) e células de dados (td) */
+  padding: 8px; /* Espaçamento interno para as células */
+}
+
+
+
+
+
+
 

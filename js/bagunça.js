@@ -57,13 +57,19 @@ function mediana() {
         let getMediana = document.getElementById("valorMediana");
         let localMediana = document.getElementById("valorMedianaReal");
         var mediana = calcularMediana(array);
+        console.log(mediana);
+        getMediana.textContent = "0";
+        localMediana.textContent = "0";
+
+
+
         array.sort(function(a, b) {
             return a - b;
           });
-
+       
         getMediana.innerHTML = (array);
         localMediana.textContent = mediana;
-  
+
 }
 
 function desvio() {
@@ -217,7 +223,7 @@ function dados() {
     array.splice(0);
     contador = 0;
     removerLinhas("taabelaCorpoFi", "tr");
-
+    
     for (var i = 1; i < tabela.rows.length - 1; i++) {
         var celula = tabela.rows[i].cells[1];
         var conteudo = celula.innerHTML;
@@ -236,20 +242,17 @@ function calcularMediana(array) {
     array.sort(function(a, b) {
       return a - b;
     });
-  
+
     const tamanho = array.length;
     const meio = Math.floor(tamanho / 2);
-    console.log(meio , "meio  ")
-  
+
     if (tamanho % 2 === 1) {
       // Tamanho ímpar, mediana é o valor central
       return array[meio];
     } else {
       // Tamanho par, mediana é a média dos dois valores centrais
       console.log(array[meio - 1] , array[meio]);
-  
       return (array[meio - 1] + array[meio]) / 2;
-    
     }
   }
   
